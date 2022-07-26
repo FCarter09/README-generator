@@ -70,29 +70,45 @@ function init() {
     .then((answers) => {
         //write markdown from answers
         const markdown = `
-            # **Project:** ${answers.name}
+            # Project: 
+            
+            ${answers.name}
 
-            # **Table of Contents:**
-            **Description** {link to project description here}
-            **License** {link to license here}
-            **Installation** {link to installation instructions}
-            **Usage** {link to usage information}
-            **Contributing** {link to contributing guidlines}
-            **Test** {link to test instructions}
+            ## Table of Contents:
+            **Description** (#description)
+            **License** (#license)
+            **Installation** (#installation)
+            **Usage** (#usage)
+            **Contributing** (#contributing)
+            **Test** (#test)
 
-            # **Description:** ${answers.description}
+            ## Description: 
+            
+            ${answers.description}
 
-            # **License:** ${answers.license}
+            ## License: 
+            
+            ${answers.license}
 
-            # **Installation:** ${answers.installation}
+            ## Installation: 
+            
+            ${answers.installation}
 
-            # **Usage:** ${answers.usage}
+            ## Usage: 
+            
+            ${answers.usage}
 
-            # **Contributing:** ${answers.contributing}
+            ## Contributing: 
+            
+            ${answers.contributing}
 
-            # **Test:** ${answers.test}
+            ## Test: 
+            
+            ${answers.test}
 
-            # **Questions:** ${answers.questions}
+            ## Questions: 
+            
+            ${answers.questions}
     
         `
         // write output to file

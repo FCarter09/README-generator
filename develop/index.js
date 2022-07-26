@@ -14,19 +14,46 @@ const questions = [
     name: "description",
     message: "What is the desciption of your project?"
     },
+
+    {type: "input",
+     name: "installation",
+     message: "What is the installation being used?"
+    },
+
+    {type: "input",
+     name: "usage",
+     message: "What is the usage?"
+    },
     
     {type: "list",
      name: "license",
      choices: ["Apache License 2.0", "GNU General Public License v3.0", "MIT License", "None"],
-    }
+    },
+
+    {type: "input",
+     name: "contributing",
+     message: "Any contributors?"
+    },
+
+    {type: "input",
+     name: "test",
+     message: "What test(s) were used?"
+    },
+
+    {type: "link",
+     name: "questions",
+     message: "Github and e-mail address in case of further questions/information needed:"
+    },
+
+
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(data) {
+function writeToFile(info) {
     //this is where we write the data to a new file
     console.log('this is coming from the writToFile function')
-    console.log(data)
-    fs.writeFile('../README.md', data, err => {
+    console.log(info)
+    fs.writeFile('../README.md', info, err => {
         // if there's an error, reject the Promise and send the error to the Promise's `.catch()` method
         if (err) {
         reject(err);
@@ -43,12 +70,31 @@ function init() {
     .then((answers) => {
         //write markdown from answers
         const markdown = `
-            # #Project:
-             ${answers.name}
-            Description: ${answers.description}
-            License: ${answers.license}
-        `
+            # **Project:** ${answers.name}
 
+            # **Table of Contents:**
+            **Description** {link to project description here}
+            **License** {link to license here}
+            **Installation** {link to installation instructions}
+            **Usage** {link to usage information}
+            **Contributing** {link to contributing guidlines}
+            **Test** {link to test instructions}
+
+            # **Description:** ${answers.description}
+
+            # **License:** ${answers.license}
+
+            # **Installation:** ${answers.installation}
+
+            # **Usage:** ${answers.usage}
+
+            # **Contributing:** ${answers.contributing}
+
+            # **Test:** ${answers.test}
+
+            # **Questions:** ${answers.questions}
+    
+        `
         // write output to file
         writeToFile(markdown)
     })

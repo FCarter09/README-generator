@@ -43,7 +43,8 @@ function init() {
     .then((answers) => {
         //write markdown from answers
         const markdown = `
-            # Project: ${answers.name}
+            # #Project:
+             ${answers.name}
             Description: ${answers.description}
             License: ${answers.license}
         `

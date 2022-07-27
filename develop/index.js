@@ -25,7 +25,7 @@ const questions = [
      message: "What is the usage?"
     },
     
-    {type: "list",
+    {type: "checkbox",
      name: "license",
      choices: ["Apache License 2.0", "Artistic License 2.0", "GNU General Public License v3.0", "MIT License", "None"],
     },
@@ -45,6 +45,10 @@ const questions = [
      message: "Github and e-mail address in case of further questions/information needed:"
     },
 
+    {type: "link",
+     name: "video",
+     message: "Place video demo here:"
+    },
 
 ];
 
@@ -76,11 +80,18 @@ ${answers.name}
 
 ## Table of Contents:
 [Description](#description)
+
 [License](#license)
+
 [Installation](#installation)
+
 [Usage](#usage)
+
 [Contributing](#contributing)
+
 [Test](#test)
+
+[Video](#video)
 
 ## Description: 
 
@@ -109,6 +120,10 @@ ${answers.test}
 ## Questions: 
 
 ${answers.questions}
+
+## Video:
+
+${answers.video}
 
 `
         // write output to file

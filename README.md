@@ -1,42 +1,41 @@
 
-            # Project: 
-            
-            Project 1
+# Project: 
 
-            ## Table of Contents:
-            **Description** (#description)
-            **License** (#license)
-            **Installation** (#installation)
-            **Usage** (#usage)
-            **Contributing** (#contributing)
-            **Test** (#test)
+Project 1
 
-            ## Description: 
-            
-            First Project
+## Table of Contents:
+[Description](#description)
+[License](#license)
+[Installation](#installation)
+[Usage](#usage)
+[Contributing](#contributing)
+[Test](#test)
 
-            ## License: 
-            
-            Apache License 2.0
+## Description: 
 
-            ## Installation: 
-            
-            npm
+First Project
 
-            ## Usage: 
-            
-            node.js
+## License: 
 
-            ## Contributing: 
-            
-            FCarter09
+MIT License
 
-            ## Test: 
-            
-            console.log
+## Installation: 
 
-            ## Questions: 
-            
-            Github: https://github.com/FCarter09/README-generator.git Email: fc_vstate@yahoo.com
-    
-        
+npm
+
+## Usage: 
+
+node.js
+
+## Contributing: 
+
+FCarter09
+
+## Test: 
+
+console.log
+
+## Questions: 
+
+Github: https://github.com/FCarter09/README-generator.git , Email: fc_vstate@yahoo.com
+

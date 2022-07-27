@@ -27,7 +27,7 @@ const questions = [
     
     {type: "list",
      name: "license",
-     choices: ["Apache License 2.0", "GNU General Public License v3.0", "MIT License", "None"],
+     choices: ["Apache License 2.0", "Artistic License 2.0", "GNU General Public License v3.0", "MIT License", "None"],
     },
 
     {type: "input",
@@ -69,48 +69,48 @@ function init() {
     inquirer.prompt(questions)
     .then((answers) => {
         //write markdown from answers
-        const markdown = `
-            # Project: 
-            
-            ${answers.name}
+const markdown = `
+# Project: 
 
-            ## Table of Contents:
-            **Description** (#description)
-            **License** (#license)
-            **Installation** (#installation)
-            **Usage** (#usage)
-            **Contributing** (#contributing)
-            **Test** (#test)
+${answers.name}
 
-            ## Description: 
-            
-            ${answers.description}
+## Table of Contents:
+[Description](#description)
+[License](#license)
+[Installation](#installation)
+[Usage](#usage)
+[Contributing](#contributing)
+[Test](#test)
 
-            ## License: 
-            
-            ${answers.license}
+## Description: 
 
-            ## Installation: 
-            
-            ${answers.installation}
+${answers.description}
 
-            ## Usage: 
-            
-            ${answers.usage}
+## License: 
 
-            ## Contributing: 
-            
-            ${answers.contributing}
+${answers.license}
 
-            ## Test: 
-            
-            ${answers.test}
+## Installation: 
 
-            ## Questions: 
-            
-            ${answers.questions}
-    
-        `
+${answers.installation}
+
+## Usage: 
+
+${answers.usage}
+
+## Contributing: 
+
+${answers.contributing}
+
+## Test: 
+
+${answers.test}
+
+## Questions: 
+
+${answers.questions}
+
+`
         // write output to file
         writeToFile(markdown)
     })
